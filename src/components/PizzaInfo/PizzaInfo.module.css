@@ -1,0 +1,194 @@
+.pizzaInfo {
+    display: flex;
+}
+
+.imageContainer {
+    flex-shrink: 0;
+    width: 50%;
+    overflow: hidden;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.imageContainer img {
+    display: block;
+    width: 100%;
+}
+
+.content {
+    padding: 72px 24px 0;
+    max-height: 375px;
+    overflow-y: auto;
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #2A272A;
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #2A272A;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.selectorContainer {
+    margin-top: 16px;
+}
+
+.selectorContainer b {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: #2A272A;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.selectorContainer li {
+    margin-bottom: 8px;
+    color: #2A272A;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.selectorContainer li i {
+    display: block;
+    width: 24px;
+    height: 20px;
+    z-index: 2;
+    background-color: #ffffff;
+    position: relative;
+    padding-left: 4px;
+}
+
+.selectorContainer li i::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid #A4A0A4;
+}
+
+.selectorContainer li.active i::before {
+    border-color: #2A272A;
+}
+
+.selectorContainer li.active i::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    top: 7px;
+    left: 11px;
+    background-color: #2A272A;
+}
+
+.selectorContainer li::before {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    height: 0;
+    line-height: 0;
+    border-bottom: 2px dotted #A4A0A4;
+}
+
+.selectorContainer li:hover:not(.active)::before,
+.selectorContainer li:hover:not(.active) i::before {
+    border-color: #2A272A;
+}
+
+.selectorContainer li span {
+    padding-right: 4px;
+    z-index: 2;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.buyContainer {
+    bottom: 0;
+    margin-top: auto;
+    position: sticky;
+    z-index: 3;
+    width: 100%;
+    padding: 24px 0;
+    background: linear-gradient(
+            0deg,
+            rgb(252, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 1) 75%,
+            rgba(255, 255, 255, 0) 100%
+    );
+}
+
+
+.buyButtonContainer {
+    background: #ffffff;
+}
+
+.buyButton {
+    display: block;
+    width: 100%;
+    border: none;
+    background: #2A272A;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.buyButtonMultiple {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: none;
+    background: #F6BA63;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    padding: 4px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.buyButtonMultiple button {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+}
+
+.buyButtonMultiple:active {
+    transform: translateY(1px);
+}
+

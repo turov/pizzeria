@@ -1,0 +1,53 @@
+.modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.content {
+    width: 1000px;
+    height: auto;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    position: relative;
+    transform: scale(0.5);
+    transition: transform 0.4s ease;
+}
+
+.modal.active .content {
+    transform: scale(1);
+}
+
+.closeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+    border: 2px solid #2A272A;
+}
+
+.closeButton:active {
+    transform: translateY(1px);
+}

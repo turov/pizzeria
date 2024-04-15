@@ -1,0 +1,101 @@
+.item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #4B4A54;
+    padding: 16px 0;
+}
+
+.image {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 40px;
+}
+
+.info {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #E2E2E2;
+    flex-grow: 1;
+}
+
+.count {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.count span {
+    min-width: 34px;
+    font-weight: 300;
+    color: #E2E2E2;
+    text-align: center;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.buttonDecrease {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    background-color: #4B4A54;
+}
+
+.buttonIncrease {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    background-color: #4B4A54;
+}
+
+.price {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #E2E2E2;
+    width: 150px;
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.buttonClose {
+    margin-left: auto;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: block;
+    cursor: pointer;
+    border: none;
+    background-color: #4B4A54;
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='20px' viewBox='0 0 24 24' fill='none' stroke='%23E2E2E2'%3E%3Cpath d='M4 4L20 20M20 4L4 20' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.buttonDecrease:hover,
+.buttonIncrease:hover,
+.buttonClose:hover {
+    background-color: #6C6B75;
+}
+
+.buttonDecrease:active,
+.buttonIncrease:active,
+.buttonClose:active {
+    transform: translateY(1px);
+    background-color: #6C6B75;
+}

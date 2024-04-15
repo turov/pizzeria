@@ -1,0 +1,30 @@
+.categories ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.categories ul li {
+    background-color: #4B4A54;
+    color: #E2E2E2;
+    padding: 12px 30px;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+    user-select: none
+}
+
+.categories ul li:hover {
+    background-color: #6C6B75;
+}
+
+.categories ul li:not(.active):active {
+    transform: translateY(1px);
+}
+
+.categories ul li.active {
+    background-color: #F6BA63;
+    color: #2A272A;
+}
