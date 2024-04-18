@@ -30,7 +30,7 @@ const CartItem: React.FC<CartItemProps> = observer(({ pizza }) => {
     <div className={styles.item}>
       <img
         className={styles.image}
-        src={`/img/items/pizza_${pizza.id}.jpg`}
+        src={`img/items/pizza_${pizza.id}.jpg`}
         alt="🍕"
       />
       <div className={styles.info}>
