@@ -12,7 +12,7 @@ const PizzaItem: React.FC<PizzaItemProps> = ({ pizza, openModal }) => {
       <div className={styles.imageContainer}>
         <img
           className={styles.image}
-          src={`/img/items/pizza_${pizza.id}.jpg`}
+          src={`img/items/pizza_${pizza.id}.jpg`}
           alt="🍕"
         />
       </div>

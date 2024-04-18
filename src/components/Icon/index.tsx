@@ -17,7 +17,7 @@ const Icon: React.FC<IconProps> = React.memo(
         width={size}
         height={size}
       >
-        <use xlinkHref={`/sprite.svg#${name}`} />
+        <use xlinkHref={`sprite.svg#${name}`} />
       </svg>
     );
   },
