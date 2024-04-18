@@ -10,7 +10,7 @@ const CartPage: React.FC = observer(() => {
   const cartItems = Cart.items;
 
   if (cartItems.length < 1) {
-    return <MessageBlock text="Ваша корзина пуста 🥺👉👈"></MessageBlock>;
+    return <MessageBlock text="Ваша корзина пуста 🥺👉👈" link={true}></MessageBlock>;
   }
 
   return (

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
 type MessageBlockProps = {
-  text: string;
-  link: boolean;
+  text?: string;
+  link?: boolean;
 };
 
 const MessageBlock: React.FC<MessageBlockProps> = ({ text, link }) => {
