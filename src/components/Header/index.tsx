@@ -1,23 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { observer } from "mobx-react-lite";
 import styles from "./styles.module.css";
 import Search from "../Search";
 import Icon from "../Icon";
 import { useLocation } from "react-router-dom";
 import Cart from "../../store/cart.ts";
-import { observer } from "mobx-react-lite";
 
 const Header: React.FC = observer(() => {
   const totalPrice = Cart.totalPrice.toLocaleString("ru");
   const totalCount = Cart.totalCount.toLocaleString("ru");
-  const items = Cart.items;
+  const items = Cart.items.slice(0);
   const isMounted = React.useRef(false);
   const location = useLocation();
 
   React.useEffect(() => {
     if (isMounted.current) {
       const data = JSON.stringify(items);
-      localStorage.setItem("react-pizza-cart", data);
+      localStorage.setItem("pizzeria-cart", data);
     }
     isMounted.current = true;
   }, [items]);

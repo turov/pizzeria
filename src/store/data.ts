@@ -50,7 +50,7 @@ class Data {
     this.page = value;
   };
 
-  fetchData = async (params: TQueryParams) => {
+  fetchData = async (params: TQueryParams)  => {
     try {
       this.status = Status.LOADING;
       const res = await getData(params);

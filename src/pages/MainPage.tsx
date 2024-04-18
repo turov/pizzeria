@@ -26,13 +26,12 @@ const MainPage: React.FC = observer(() => {
   };
 
   const getData = React.useCallback(() => {
-    console.log(page, sortingType, searchValue, category);
     Data.fetchData({
       page,
       sortingType,
       searchValue,
       category,
-    });
+    }).then(r => r);
   }, [sortingType, searchValue, category, page]);
 
   React.useEffect(() => {
@@ -46,7 +45,6 @@ const MainPage: React.FC = observer(() => {
         items.length < count
       ) {
         if (items.length < count) {
-          console.log("sss");
           Data.setPage(page + 1);
         }
       }

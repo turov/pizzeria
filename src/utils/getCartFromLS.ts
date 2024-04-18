@@ -1,5 +1,5 @@
 export const getCartFromLS = () => {
-  const data = localStorage.getItem("react-pizza-cart");
+  const data = localStorage.getItem("pizzeria-cart");
   if (!data) {
     return [];
   } else {
