@@ -41,11 +41,11 @@ const Search: React.FC = observer(() => {
         value={value}
         type="search"
         placeholder="Поиск пиццы..."
-        className={styles.search}
+        className={styles.input}
         onChange={changeInputValue}
       />
       {value && (
-        <button type="button" onClick={clearInput} className={styles.clear}>
+        <button type="button" onClick={clearInput} className={styles.buttonClear}>
           <Icon name="cross" size="20" stroke="#E2E2E2" />
         </button>
       )}

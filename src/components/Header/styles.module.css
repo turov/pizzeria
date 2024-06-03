@@ -60,7 +60,7 @@
     display: flex;
 }
 
-.count span {
+.count output {
     color: #E2E2E2;
     margin-left: 10px;
 }
