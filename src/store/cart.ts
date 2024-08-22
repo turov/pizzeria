@@ -40,6 +40,19 @@ class Cart {
       : this.items[index].count--;
   };
 
+  updateItem = (value: TCartItem) => {
+    const index = this.items.findIndex(
+        (item) => item.id === value.id && item.size === value.size,
+    );
+    if (index !== -1) {
+      if (value.count > 0) {
+        this.items[index].count = value.count;
+      } else {
+        this.items.splice(index, 1);
+      }
+    }
+  };
+
   clearCart = () => {
     this.items = [];
   };

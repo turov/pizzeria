@@ -29,16 +29,17 @@ const PizzaInfo: React.FC<PizzaInfoProps> = observer(({ pizza }) => {
     (x) => x.id === item.id && x.size === item.size && x.count > 0,
   );
 
-  const onClickAdd = () => {
+  const onClickAdd = (event: React.MouseEvent<HTMLButtonElement> | React.MouseEvent<HTMLDivElement> ) => {
+    event.stopPropagation();
     Cart.addItem(item);
   };
 
-  const onClickRemove = () => {
-    if (item.count > 1) {
-      item.count--;
-      Cart.removeItem(item);
-    } else {
-      Cart.removeItem(item);
+  const onClickRemove = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+    if (itemInCart && itemInCart.count > 1) {
+      Cart.updateItem({ ...itemInCart, count: itemInCart.count - 1 });
+    } else if (itemInCart) {
+      Cart.removeItem(itemInCart);
     }
   };
 
@@ -84,7 +85,7 @@ const PizzaInfo: React.FC<PizzaInfoProps> = observer(({ pizza }) => {
           <div className={styles.buyButtonContainer}>
             {itemInCart ? (
               <div className={styles.buyButtonMultiple} onClick={onClickAdd}>
-                <div onClick={(e) => e.stopPropagation()}>
+                <div>
                   <button className={styles.button} onClick={onClickRemove}>
                     <Icon
                       name="minus"
